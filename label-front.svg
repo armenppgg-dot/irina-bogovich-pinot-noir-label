@@ -1,4 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1500" role="img" aria-labelledby="title desc">
-  <title id="title">label-front</title>
-  <desc id="desc">SVG container for the front label artwork.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1600" width="900" height="1600" role="img" aria-labelledby="title desc">
+  <title id="title">Irina Bogovich Pinot Noir front label</title>
+  <desc id="desc">Vertical wine label with a warm matte background, layered terroir waves, graphite lines, delicate gold accents, and centered typography.</desc>
+
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f0e6"/>
+      <stop offset="100%" stop-color="#ebe3d6"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#b58a38"/>
+      <stop offset="50%" stop-color="#e0c06a"/>
+      <stop offset="100%" stop-color="#9d742a"/>
+    </linearGradient>
+    <filter id="paperGrain" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="17" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0" result="monoNoise"/>
+      <feComponentTransfer in="monoNoise" result="softNoise">
+        <feFuncA type="table" tableValues="0 0.03"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" in2="softNoise" mode="multiply"/>
+    </filter>
+    <style>
+      .graphite { fill: none; stroke: #495057; stroke-linecap: round; stroke-linejoin: round; }
+      .gold-line { fill: none; stroke: url(#gold); stroke-linecap: round; }
+      .label-text { fill: #2f3439; font-family: "Times New Roman", Georgia, serif; text-anchor: middle; }
+      .smallcaps { letter-spacing: 7px; }
+      .subtitle { letter-spacing: 6px; }
+      .vintage { letter-spacing: 3px; }
+    </style>
+  </defs>
+
+  <rect x="20" y="20" width="860" height="1560" rx="42" fill="url(#paper)" stroke="#d8cfbf" stroke-width="2"/>
+  <rect x="20" y="20" width="860" height="1560" rx="42" fill="#000000" opacity="0.03" filter="url(#paperGrain)"/>
+
+  <path d="M110 280C196 250 278 220 366 230C454 240 536 306 628 318C709 329 777 300 825 272L825 474C773 512 706 542 624 536C525 528 441 457 348 452C261 447 185 493 110 548Z"
+        fill="#e4ddcf" opacity="0.96"/>
+  <path d="M75 470C176 432 289 423 388 450C488 478 572 539 671 552C742 561 795 540 845 514V756C787 790 720 818 632 812C521 806 438 733 330 724C231 715 146 759 75 806Z"
+        fill="#ddd4c6" opacity="0.92"/>
+  <path d="M60 730C147 690 254 676 357 701C459 727 547 792 649 814C721 830 787 823 845 802V1064C784 1090 710 1107 619 1098C514 1088 433 1020 329 1009C220 998 132 1053 60 1096Z"
+        fill="#d5cbbe" opacity="0.9"/>
+  <path d="M95 1018C181 982 264 967 352 983C452 1002 529 1060 628 1087C702 1107 773 1106 826 1094V1316C765 1340 692 1354 603 1346C494 1337 413 1281 311 1265C225 1251 155 1276 95 1310Z"
+        fill="#cec3b5" opacity="0.86"/>
+
+  <path class="graphite" stroke-width="3.2"
+        d="M110 292C196 262 279 236 367 246C455 256 537 321 628 333C709 344 777 315 825 287"/>
+  <path class="graphite" stroke-width="2.6"
+        d="M75 488C177 450 288 441 388 467C488 494 572 556 671 568C742 577 795 556 845 530"/>
+  <path class="graphite" stroke-width="2.8"
+        d="M60 748C146 708 253 694 356 719C459 744 547 810 648 831C720 846 787 840 845 818"/>
+  <path class="graphite" stroke-width="2.4"
+        d="M95 1034C181 999 265 985 352 1000C452 1018 529 1078 628 1104C702 1123 773 1122 826 1110"/>
+  <path class="graphite" stroke-width="1.8" opacity="0.65"
+        d="M142 380C230 350 315 344 401 365C476 383 548 429 631 442C706 454 766 438 809 417"/>
+  <path class="graphite" stroke-width="1.8" opacity="0.6"
+        d="M122 875C214 839 309 834 398 858C485 882 559 932 649 953C721 970 781 965 822 949"/>
+
+  <path class="gold-line" stroke-width="4"
+        d="M160 218H740"/>
+  <path class="gold-line" stroke-width="3"
+        d="M215 1200C322 1176 438 1177 550 1200C621 1215 689 1240 748 1268"/>
+
+  <text class="label-text smallcaps" x="450" y="625" font-size="58">IRINA BOGOVICH</text>
+  <text class="label-text subtitle" x="450" y="735" font-size="76">PINOT NOIR</text>
+  <text class="label-text vintage" x="450" y="1410" font-size="33">Kara-Tau • Sevastopol • 2021</text>
 </svg>
